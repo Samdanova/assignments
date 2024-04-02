@@ -1,11 +1,21 @@
 //the second part=Contact Search Tool
-import { contacts } from "../data/contacts.js";
-const data = contacts.results;
+// import { contacts } from "../data/contacts.js";
 
+async function getData() {
+  try {
+    const response = await fetch("https://randomuser.me/api/?results=100");
+    const data = await response.json();
+    console.log(data.results);
+    return data.results;
+  } catch (error) {
+    console.log("error", error);
+  }
+}
 const submitForm = document.querySelector(".contact-form");
 const contactContainer = document.querySelector(".contact-container");
 
-function searchContact() {
+async function searchContact() {
+  const data = await getData();
   const inputValue = document.getElementById("input-contact").value.trim();
   const phoneNumber = parseInt(inputValue.replace(/\D/g, ""));
 
