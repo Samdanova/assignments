@@ -2,16 +2,16 @@
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.button-search{
-  padding:1vh 2vw;
+.button-search {
+  padding: 1vh 2vw;
   background-color: #2477cf;
   color: #fff;
   border: none;
@@ -24,15 +24,15 @@ button:hover {
   background-color: #0056b3;
 }
 
-input{
+input {
   padding: 1vh 1vw;
 }
-.contact-container{
+.contact-container {
   display: flex;
   flex-wrap: wrap;
   align-self: center;
 }
-.contact-item{
+.contact-item {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -48,8 +48,8 @@ input{
   border-radius: 5px;
 }
 
-.error-text{
-  color:red;
+.error-text {
+  color: red;
   font-size: 0.8rem;
-margin-top: 2rem;
+  margin-top: 2rem;
 }
