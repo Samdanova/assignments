@@ -1,5 +1,6 @@
 import { contacts } from "../data/contacts.js";
 console.log(contacts);
+//the first part of ex
 function sortedByLastName(array) {
   array.sort((el1, el2) =>
     el1.name.last.toUpperCase() > el2.name.last.toUpperCase() ? 1 : -1
