@@ -42,3 +42,35 @@ function concatNames(array) {
   return result;
 }
 console.log(concatNames(contacts.results));
+
+function consoleEmail(array) {
+  for (let index = 0; index < array.length; index++) {
+    console.log(array[index].email);
+  }
+}
+consoleEmail(contacts.results);
+
+function findContact(id, array) {
+  const contact = array.find((element) => element.id.value === id);
+  return contact;
+}
+console.log(findContact("856059254", contacts.results));
+
+function countContacts(country, array) {
+  let count = 0;
+  for (let index = 0; index < array.length; index++) {
+    array[index].location.country === country && count++;
+  }
+  return count;
+}
+console.log(countContacts("Netherlands", contacts.results));
+
+function ageRangeContacts(minAge, maxAge, array) {
+  const newArray = [];
+  for (let index = 0; index < array.length; index++) {
+    (array[index].dob.age <= maxAge) & (array[index].dob.age >= minAge) &&
+      newArray.push(array[index]);
+  }
+  return newArray;
+}
+console.log(ageRangeContacts(25, 35, contacts.results));
