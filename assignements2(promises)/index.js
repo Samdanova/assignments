@@ -209,3 +209,23 @@ async function handleParsing() {
 handleParsing();
 
 //EX6
+
+function resolveImmediate() {
+  return Promise.resolve(25);
+}
+
+function resolveDelayed() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(17);
+    }, 2000);
+  });
+}
+function combine(prmX, prmY) {
+  return Promise.all([prmX, prmY]).then((values) => {
+    return values[0] + values[1];
+  });
+}
+combine(resolveImmediate(), resolveDelayed()).then((sum) => {
+  console.log(sum);
+});
