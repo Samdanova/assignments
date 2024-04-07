@@ -7,6 +7,7 @@ function sortedByLastName(array) {
   );
   return array;
 }
+
 const sortedArray = sortedByLastName(contacts.results);
 console.log(sortedArray);
 
